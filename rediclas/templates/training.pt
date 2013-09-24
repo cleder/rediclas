@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:tal="http://xml.zope.org/namespaces/tal">
+<head>
+  <title>Train/untrain</title>
+</head>
+<body>
+    <form method="post" action="${request.route_url('train')}">
+        <input type="text" name="id" /> ID
+        <br />
+        <textarea id="text" name="text"></textarea>
+        <br />
+        Tags:
+        <br />
+        <input type="text" name="tag" />
+        <br />
+        <input type="text" name="tag" />
+        <br />
+        <input type="text" name="tag" />
+        <br />
+        <input type="text" name="tag" />
+        <br />
+        <input type="text" name="tag" />
+        <br />
+        <input type="submit" name="update" value="Update">
+        <input type="submit" name="cancel" value="Cancel">
+    </form>
+    <p>
+    Document: ${id} <br />
+    <span tal:repeat="tag tags">${tag}</span>
+    </p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:tal="http://xml.zope.org/namespaces/tal">
+<head>
+  <title>Stopwords</title>
+</head>
+<body>
+    <form method="post" action="${request.route_url('stopwords')}">
+        <textarea id="text" name="text">${stopwords}</textarea>
+        <br />
+        <input type="submit" name="update" value="Update">
+        <input type="submit" name="cancel" value="Cancel">
+    </form>
+</body>
+</html>
